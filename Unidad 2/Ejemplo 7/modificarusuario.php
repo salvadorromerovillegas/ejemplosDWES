@@ -21,26 +21,27 @@ catch (PDOException $e)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta usuarios</title>
+    <title>Listar usuarios</title>
 </head>
 <body>
 <?php
 
-    $usuario=['nombre'=>'Jon','apellidos'=>'Nieve', 'email'=>'jonnieve@blufffff.net','password'=>'1234'];
     if ($pdo)
     {
-        $resultado=crearUsuario($pdo,$usuario);
-        if ($resultado===false)
+        $emailActual='email1@test.test';
+        $nuevosDatos=['email'=>'email1email1@test.test', 'nombre'=>'TEST1', 'apellidos'=>'TESTAP1', 'habilitado'=>false];
+        $resultado=modificarUsuario($pdo, $emailActual,$nuevosDatos);
+        if ($resultado>0)
         {
-            echo 'El usuario no se pudo crear por un error en la base de datos.';
+            echo '<h1>El usuario se modifico adecuadamente.</h1>';
         }
-        elseif ($resultado==-1)
+        elseif ($resultado===0)
         {
-            echo 'El usuario no se pudo crear porque ya existe un email igual.';
+            echo '<H1>No hay variación en los datos, no se ha modificado.</H1>';
         }
         else
         {
-            echo "El usuario se ha creado y su id es $resultado";
+            echo '<h1>El usuario no se pudo modificar.</h1>';
         }
     }
     else

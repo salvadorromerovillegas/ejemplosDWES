@@ -26,7 +26,7 @@ catch (PDOException $e)
 <body>
 <?php
 
-    $usuario=['nombre'=>'Jon','apellidos'=>'Nieve', 'email'=>'jonnieve@blufffff.net','password'=>'1234'];
+    $usuario=['nombre'=>'Felíz','apellidos'=>'Miércoles', 'email'=>'feliz@miercoles.name','password'=>'1234'];
     if ($pdo)
     {
         $resultado=crearUsuario($pdo,$usuario);

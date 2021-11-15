@@ -8,9 +8,9 @@ Lista de ejemplos aquí incluidos:
 * Insertar un registro en la base de datos [Ejemplo 2](Ejemplo%202)
 * Insertar un registro en la base de datos usando bindParam [Ejemplo 3](Ejemplo%203)
 * Buscar un registro en la base de datos [Ejemplo 4](Ejemplo%204)
-* Insertar un registro versión transaccional (_comming soon_)
-* Buscar multiples registros en un rango de fechas (_comming soon_).
-* Modificar registros versión transaccional (_comming soon_). 
+* Insertar un registro versión transaccional [Ejemplo 5](Ejemplo%205)
+* Buscar multiples registros en un rango de fechas [Ejemplo 6](Ejemplo%206).
+* Modificar registros versión transaccional [Ejemplo 7](Ejemplo%207). 
 * Borrar un registro (_comming soon_).
 * Procesar datos de entrada con filter_input (_comming soon_).
 * Procesar datos de entrada con filter_input_array (_comming soon_).
