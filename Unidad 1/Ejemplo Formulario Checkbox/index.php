@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
+    <title>Ejemplo Formulario Checkbox</title>
     <style>
         .si {font-weight: bold;}
         .no {font-style: italic;}
@@ -32,7 +32,8 @@
         //nos quedamos con los deportes que tenemos previstos (intersección) descartando otros (evitando manipulaciones).
         $deportes_rec=array_intersect_key($_POST['deportes'],$deportes);                
         //nos quedamos con los campos que solo tienen un valor como "si" (evitando manipulaciones).
-        $deportes_rec=array_filter($deportes_rec, fn($val)=>$val==='si');
+        //$deportes_rec=array_filter($deportes_rec, fn($val)=>$val==='si');
+        $deportes_rec=array_filter($deportes_rec, function ($val) { return $val==='si';});
         //completamos los campos que no haya marcado el usuario con "no":
         $deportes_rec=array_merge($deportes,$deportes_rec);
         //mostramos los datos:
