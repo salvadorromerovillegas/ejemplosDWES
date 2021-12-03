@@ -1,0 +1,69 @@
+<h1>Formulario de reservas on-line de vehículos</h1>
+<form action="" method="post">
+    <div>
+    <label for="recogida">
+        Seleccione la provincia de recogida:
+        <select name="recogida" id="recogida">
+            <option value="04" [!*recogida 04!] >Almería</option>
+            <option value="11" [!*recogida 11!]>Cádiz</option>
+            <option value="14" [!*recogida 14!]>Córdoba</option>
+            <option value="18" [!*recogida 18!]>Granada</option>        
+            <option value="21" [!*recogida 24!]>Huelva</option>
+            <option value="23" [!*recogida 23!]>Jaén</option>
+            <option value="29" [!*recogida 29!]>Málaga</option>
+            <option value="41" [!*recogida 41!]>Sevilla</option>            
+            <option value="66">Provincia incorrecta</option>
+        </select>
+    </label>
+    </div>
+    <div>
+        <label for="drecogida">
+            Día de recogida: <input type="text" id="drecogida" name="drecogida" value="[!drecogida!]">
+            (dd/mm/aaaa)
+        </label>
+    </div>
+    <div>
+        <label for="hrecogida">
+            Hora de recogida: <input type="text" id="hrecogida" name="hrecogida" value="[!hrecogida!]">
+            (hh:mm)
+        </label>
+    </div>
+    <div>
+        <label for="ddevolucion">
+            Día de devolución: <input type="text" id="ddevolucion" name="ddevolucion" value="[!ddevolucion!]">
+            (dd/mm/aaaa)
+        </label>
+    </div>
+    <div>
+        <label for="hdevolucion">
+            Hora de devolución: <input type="text" id="hdevolucion" name="hdevolucion" value="[!hdevolucion!]">
+            (hh:mm)
+        </label>
+    </div>
+    <div>
+        <label for="edad">
+            ¿Edad del conductor?
+            <input type="text" id="edad" name="edad" value="[!edad!]">
+        </label>
+    </div>
+    <div>
+        <label for="email">
+            Email:
+            <input type="text" id="email" name="email" value="[!email!]">
+        <div>
+        </label>
+        <h3>¿Desea recibir ofertas en su e-mail?</h3>
+        <blockquote>
+        <label for="ofertas1">            
+            Ofertas de vehículos en alquiler: <input type="checkbox" name="ofertas[alquiler]" value="ofertas1" [!*ofertas_alquiler!] id="">          
+        </label><br>
+        <label for="ofertas2">            
+            Ofertas de otros productos: <input type="checkbox" name="ofertas[otros]" value="ofertas2" [!*ofertas_otros!] id="">          
+        </label>
+        </blockquote>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Enviar!">
+    </div>
+</form>
